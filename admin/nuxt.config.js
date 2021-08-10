@@ -9,7 +9,9 @@ export default {
       {name: 'format-detection', content: 'telephone=no'}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {rel: 'stylesheet', href: '/css/font-awesome/css/all.css'},
+      {rel: 'stylesheet', href: '/css/default.css'}
     ]
   },
   server: {
@@ -40,7 +42,11 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:3000',
+    proxyHeaders: false,
+    credentials: false
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
